@@ -1,0 +1,15 @@
+node_modules/
+dist/
+
+# Real bank data must never be committed. Only the synthetic files in sample/ are allowed.
+*.csv
+!sample/*.csv
+
+# Google OAuth credentials and tokens must never be committed
+client_secret*.json
+*credentials*.json
+gmail-token.json
+
+# Sample PDFs are synthetic; real statements must never be committed
+*.pdf
+!sample/*.pdf

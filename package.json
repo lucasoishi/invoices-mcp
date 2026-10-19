@@ -1,0 +1,36 @@
+{
+  "name": "invoices-mcp",
+  "version": "0.4.0",
+  "description": "A local MCP server that lets AI agents query your bank invoices (Nubank CSV, Itaú PDF). Read-only and offline by default; optional read-only Gmail fetch for invoice attachments.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "invoices-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "sample",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "unpdf": "^1.9.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
